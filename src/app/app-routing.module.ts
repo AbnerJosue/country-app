@@ -6,20 +6,12 @@ import { ContactPageComponent } from './shared/pages/contact-page/contact-page.c
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomePageComponent
-  },
-  {
-    path: 'about',
-    component: AboutPageComponent
-  },
-  {
-    path: 'contact',
-    component: ContactPageComponent
+    path: 'countries',
+    loadChildren: () => import('./countries/countries-rounting.module').then( m => m.CountriesRoutingModule), // lazyloading
   },
   {
     path:'**',
-    redirectTo: ''
+    redirectTo: 'by-capital'
   }
 ]
 
@@ -33,3 +25,7 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { }
+
+// llamadas http
+// obseravdores angular
+ 
