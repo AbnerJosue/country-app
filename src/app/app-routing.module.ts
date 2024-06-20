@@ -25,7 +25,3 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { }
-
-// llamadas http
-// obseravdores angular
- 
